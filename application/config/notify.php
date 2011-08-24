@@ -2,7 +2,7 @@
 
 return array(
 	'default_message_type'	=> 'default',
-	'view'					=> 'notify/jqueryui',
+	'view'					=> 'notify/bootstrap',
 	
 	// By default, should notify always create 
 	// persistent messages (via session)?

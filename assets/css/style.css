@@ -1,0 +1,40 @@
+/* Bootstrap overrides */
+form input[type=text],
+form input[type=password],
+form input[type=submit],
+form textarea,
+form select,
+form .uneditable-input {
+    min-width: 60px;
+    width: auto;
+}
+
+form textarea {
+    font-size: 16px;
+}
+
+.tweets {
+    list-style: none;
+}
+
+.tweets li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.tweet-content {
+    font-size: 14px;
+}
+
+.tweet-id {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.tweet-time {
+    margin-left: 20px;
+    font-size: 10px;
+    font-style: italic;
+}

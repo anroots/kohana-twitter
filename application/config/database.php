@@ -19,7 +19,7 @@ return array
 			 * Ports and sockets may be appended to the hostname.
 			 */
 			'hostname'   => 'localhost',
-			'database'   => 'projects_quickthoughts',
+			'database'   => 'projects_kohana_twitter',
 			'username'   => 'arendus',
 			'password'   => 'vaarikas',
 			'persistent' => FALSE,
@@ -27,6 +27,6 @@ return array
 		'table_prefix' => '',
 		'charset'      => 'utf8',
 		'caching'      => FALSE,
-		'profiling'    => TRUE,
+		'profiling'    => FALSE,
 	),
 );
