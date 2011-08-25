@@ -714,6 +714,7 @@ form input[type=checkbox], form input[type=radio] {
 }
 form input[type=text],
 form input[type=password],
+form input[type=email],
 form textarea,
 form select,
 form .uneditable-input {

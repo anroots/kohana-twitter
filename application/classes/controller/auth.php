@@ -23,7 +23,7 @@ class Controller_Auth extends Controller_Template
 
         // If the login form was posted...
         $post = $this->request->post();
-        if ($post) {
+        if (isset($post['login'])) {
 
             // Try to login
             if (Auth::instance()->login($post['username'], $post['password'])) {

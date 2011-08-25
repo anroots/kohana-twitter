@@ -31,7 +31,7 @@
 
 
             </ul>
-            
+
             <ul class="nav secondary-nav">
                 <li class="menu">
                     <? if (Auth::instance()->logged_in()): ?>
@@ -46,7 +46,8 @@
                     <? else: ?>
 
                     <form action="<?=URL::base()?>auth/login" method="post">
-                        <input type="text" name="username" placeholder="Username" size="12" required autofocus tabindex="1" />
+                        <input type="text" name="username" placeholder="Username" size="12" required autofocus
+                               tabindex="1"/>
                         <input type="password" name="password" placeholder="Password" size="12" required tabindex="2"/>
                         <input type="submit" name="login" value="Login"/>
                     </form>
@@ -56,10 +57,15 @@
         </div>
     </div>
 </div>
+
+
 <div class="container">
     <h1><?=$title?></h1>
     <?=Notify::render()?>
     <?=$content?>
+</div>
+<!-- Signup end -->
+
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 <script src="<?=URL::base()?>assets/js/script.js" type="text/javascript"></script>

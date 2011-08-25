@@ -5,12 +5,13 @@
 
 <ul class="tweets">
     <? if ($posts->count() > 0):
-        foreach ($posts as $post): ?>
+    foreach ($posts as $post): ?>
         <li>
             <span class="tweet-id">#<?=$post->id?></span>
             <span class="tweet-content"><?=$post->post?></span>
-            <span class="tweet-time">(<?=Date::fuzzy_span(strtotime($post->created))?>)</span>
+            <span class="tweet-time" title="<?=$post->created?>">(<?=Date::fuzzy_span(strtotime($post->created))?>
+                )</span>
         </li>
-            <? endforeach;
-    endif?>
-    </ul>
+        <? endforeach;
+endif?>
+</ul>

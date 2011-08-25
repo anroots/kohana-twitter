@@ -11,21 +11,15 @@ class Controller_Dash extends Controller_Main
 
         if (!empty($post)) {
 
-            try {
+            $p->post($post['post']);
+            $this->request->redirect('dash/');
 
-                $p->post($post['post']);
-                $this->request->redirect('dash/');
-
-            } catch (ORM_Validation_Exception $e) {
-                Notify::msg('Aww, something went horribly, <strong>horribly</strong> wrong!', 'error');
-            }
         }
 
         $this->template->title = 'Dashboard';
         $this->template->content->posts = $p->get(NULL, TRUE);
-        
-    }
 
+    }
 
 
 } 

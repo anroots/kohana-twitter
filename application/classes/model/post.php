@@ -25,14 +25,54 @@ class Model_Post extends ORM
 
 
     /**
+     * Define the rules of the model.
+     * For example, don't let the user create a new post with an empty content
+     * The rules function is called automatically when the model data is saved.
+     *
+     * @return array An array of Validation rules
+     */
+    public function rules() {
+        return array(
+            'post' => array(
+                array('not_empty')
+            )
+        );
+    }
+
+
+    /**
+     * Define filters for input data.
+     * For example, trim (remove whitespace) from the start and end of the post.
+     * @return array
+     */
+    public function filters() {
+        return array(
+            'post' => array(
+                array('trim'),
+            )
+        );
+    }
+
+    /**
      * Save a new post
      * @param string $content Post content, max 140 chars
-     * @return int Post ID
+     * @return int|bool Post ID
      */
     public function post($content) {
         $this->post = $content;
         $this->user_id = Auth::instance()->get_user()->id;
-        $this->save();
+
+        // Saving might fail when rules() fail.
+        try {
+            $this->save();
+        } catch (ORM_Validation_Exception $e) {
+            // Show errors to the user
+            $e = $e->errors('validation');
+            foreach ($e as $error) {
+                Notify::msg($error, 'error');
+            }
+            return FALSE;
+        }
         return $this->id;
     }
 }
