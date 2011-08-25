@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6622334-a107-47c8-bbe4-922cf42ed822" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/logs/2011/08/25.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/auth.php" afterPath="$PROJECT_DIR$/application/classes/controller/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/dash.php" afterPath="$PROJECT_DIR$/application/classes/controller/dash.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/main.php" afterPath="$PROJECT_DIR$/application/classes/controller/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/model/post.php" afterPath="$PROJECT_DIR$/application/classes/model/post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/auth/login.php" afterPath="$PROJECT_DIR$/application/views/auth/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dash/index.php" afterPath="$PROJECT_DIR$/application/views/dash/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/template.php" afterPath="$PROJECT_DIR$/application/views/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/bootstrap-1.1.0.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap-1.1.0.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
     </list>
     <ignored path="kohana-twitter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README">
+      <file leaf-file-name="README.markdown" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="173" selection-start="268" selection-end="268" vertical-scroll-proportion="0.13513513">
+            <state line="14" column="20" selection-start="637" selection-end="637" vertical-scroll-proportion="0.3783784">
               <folding />
             </state>
           </provider>
@@ -516,9 +506,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
+    <entry file="file://$PROJECT_DIR$/README.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="173" selection-start="268" selection-end="268" vertical-scroll-proportion="0.13513513">
+        <state line="14" column="20" selection-start="637" selection-end="637" vertical-scroll-proportion="0.3783784">
           <folding />
         </state>
       </provider>
