@@ -11,16 +11,21 @@ class Model_Post extends ORM
      */
     public function get($id = NULL, $only_mine = TRUE) {
 
-        $q = $this;
+        // find_all can't be called on loaded objects
+        if ($this->loaded()) {
+            $this->clear();
+        }
 
         if ($only_mine) {
-            $q->where('user_id', '=', Auth::instance()->get_user()->id);
+            $this->where('user_id', '=', Auth::instance()->get_user()->id);
         }
+
         if ($id) {
-            return $q->where('id', '=', $id)
+            return $this->where('id', '=', $id)
                     ->find();
         }
-        return $q->find_all();
+        return $this->limit(10)
+                ->find_all();
     }
 
 
@@ -65,12 +70,15 @@ class Model_Post extends ORM
         // Saving might fail when rules() fail.
         try {
             $this->save();
+
         } catch (ORM_Validation_Exception $e) {
             // Show errors to the user
             $e = $e->errors('validation');
+
             foreach ($e as $error) {
                 Notify::msg($error, 'error');
             }
+
             return FALSE;
         }
         return $this->id;

@@ -11,6 +11,7 @@
             <span class="tweet-content"><?=$post->post?></span>
             <span class="tweet-time" title="<?=$post->created?>">(<?=Date::fuzzy_span(strtotime($post->created))?>
                 )</span>
+            <a class="btn danger" href="<?=URL::base()?>dash/delete/<?=$post->id?>">Delete</a>
         </li>
         <? endforeach;
 endif?>

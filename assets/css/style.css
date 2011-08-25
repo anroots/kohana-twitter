@@ -44,3 +44,7 @@ form fieldset input {
     font-size: 10px;
     font-style: italic;
 }
+
+.tweets .btn {
+    float: right;
+}
